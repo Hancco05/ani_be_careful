@@ -1,0 +1,33 @@
+🎨 Diseño del sitio “No al Maltrato Animal”
+
+📌 Este será un sitio de una sola página (single view) con estructura clara y motivadora:
+
+🖼️ Estructura visual de la página
+
+Encabezado / Banner principal
+
+Fondo con una imagen relacionada con animales (ej: un perro/gato feliz).
+
+Título grande: “🚫 No al Maltrato Animal 🐾”.
+
+Subtítulo: “Crea conciencia, protege y denuncia el maltrato.”
+
+Sección informativa
+
+Texto corto sobre qué es el maltrato animal.
+
+Consejos prácticos (ej: “Adopta, no compres”, “Denuncia el maltrato”).
+
+Sección dinámica (frases de conciencia)
+
+Un contenedor donde JS/TS mostrará frases motivadoras que vienen desde el backend en formato JSON.
+
+Estilo tipo tarjetas con sombra suave.
+
+Sección estadísticas (opcional)
+
+Un bloque donde más adelante se podrían mostrar números (ej: “Cada año, miles de animales sufren abandono”).
+
+Pie de página
+
+Texto pequeño: “Proyecto de concienciación contra el maltrato animal — Hecho con ❤️ en Spring Boot”.
