@@ -1,4 +1,4 @@
-package com.ejemplo.animalconciencia.controller;
+package com.example.animal_conciencia.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
