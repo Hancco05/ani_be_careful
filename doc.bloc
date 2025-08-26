@@ -1,19 +1,20 @@
 animal-awareness/
 ├── src/
 │   ├── main/
-│   │   ├── java/com/example/animalawareness/
-│   │   │   ├── controller/     → Controladores (Web + REST)
-│   │   │   ├── model/          → Entidades (POJOs, JPA)
-│   │   │   ├── repository/     → Repositorios (DAO, JPA)
-│   │   │   ├── service/        → Lógica de negocio
-│   │   │   └── AnimalAwarenessApplication.java
-│   │   ├── resources/
-│   │   │   ├── static/         → CSS, JS, imágenes
-│   │   │   ├── templates/      → Vistas HTML (Thymeleaf)
-│   │   │   ├── messages_es.properties → Traducción español
-│   │   │   ├── messages_en.properties → Traducción inglés
-│   │   │   └── application.properties
-│   └── test/java/com/example/animalawareness/ → Pruebas
-├── docs/   → Documentación y diagramas
+│   │   ├── java/
+│   │   │   └── com.example.animalawareness/
+│   │   │       ├── AnimalAwarenessApplication.java   # Clase principal Spring Boot
+│   │   │       └── controller/
+│   │   │           └── HomeController.java           # Controlador
+│   │   └── resources/
+│   │       ├── static/                               # Archivos estáticos
+│   │       │   ├── css/
+│   │       │   │   └── styles.css
+│   │       │   ├── js/
+│   │       │   │   └── script.js
+│   │       │   └── images/                           # Logos o imágenes
+│   │       ├── templates/
+│   │       │   └── index.html                        # Vista principal
+│   │       └── application.properties
+│   └── test/
 ├── pom.xml
-└── README.md
