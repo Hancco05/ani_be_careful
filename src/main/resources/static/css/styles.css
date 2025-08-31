@@ -1,43 +1,73 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #f9f9f9;
-    color: #333;
+    padding: 0;
+    background: #f4f6f9;
 }
 
 header {
-    background: #4CAF50;
+    background: #2c3e50;
     color: white;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
 }
 
 main {
     padding: 20px;
 }
 
-h2 {
-    color: #4CAF50;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li::before {
-    content: "🐾 ";
-}
-
 form {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 form input,
-form button {
-    margin: 5px 0;
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 15px;
     padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
 }

@@ -1,48 +1,63 @@
+<?php include("../config/db.php"); ?>
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title th:text="${title}">Conciencia Animal</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>Gestión de Datos</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Conciencia Animal</h1>
-      <p>Unidos contra el maltrato animal 🐾</p>
+      <h1>📊 Sistema de Gestión</h1>
+      <nav>
+        <a href="create_data.php">➕ Crear</a>
+        <a href="view_data.php">📂 Ver</a>
+        <a href="update_data.php">✏️ Actualizar</a>
+        <a href="delete_data.php">🗑️ Eliminar</a>
+      </nav>
     </header>
 
     <main>
-      <section class="intro">
-        <h2>¿Por qué es importante?</h2>
+      <section>
+        <h2>Bienvenido</h2>
         <p>
-          El maltrato animal es un problema global. La conciencia y educación
-          son claves para proteger a los seres que no tienen voz.
+          Este sistema permite administrar la tabla <b>datos</b> conectada a
+          MySQL.
         </p>
       </section>
 
-      <section class="acciones">
-        <h2>¿Qué puedes hacer?</h2>
-        <ul>
-          <li>Adopta en lugar de comprar</li>
-          <li>Denuncia casos de maltrato</li>
-          <li>Educa sobre el respeto a los animales</li>
-        </ul>
-      </section>
+      <section>
+        <h2>Formulario de Registro</h2>
+        <form
+          action="../src/create_data.php"
+          method="POST"
+          onsubmit="return validarFormulario()"
+        >
+          <label>Nombre:</label>
+          <input type="text" name="nombre" required />
 
-      <section class="form">
-        <h2>Comprométete</h2>
-        <form>
-          <input type="text" placeholder="Tu nombre" required />
-          <input type="email" placeholder="Tu correo" required />
-          <button type="submit">Unirme a la causa</button>
+          <label>Fecha:</label>
+          <input type="date" name="fecha" required />
+
+          <label>Tipo:</label>
+          <select name="tipo" required>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+          </select>
+
+          <label>Descripción:</label>
+          <textarea name="descripcion" required></textarea>
+
+          <button type="submit">Guardar</button>
         </form>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 Conciencia Animal</p>
+      <p>© 2025 - Sistema Collins</p>
     </footer>
 
-    <script th:src="@{/js/script.js}"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>
