@@ -21,3 +21,16 @@ animal-awareness/
 
 
 determinar
+
+/mi_proyecto/
+│-- /config/
+│   └── db.php
+│-- /public/
+│   ├── index.php
+│   ├── styles.css   <-- CSS principal
+│   └── scripts.js   <-- JS principal
+│-- /src/
+│   ├── create_data.php
+│   ├── update_data.php
+│   ├── delete_data.php
+│   └── view_data.php
