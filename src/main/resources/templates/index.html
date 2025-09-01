@@ -1,64 +1,67 @@
-<?php include("../config/db.php"); ?>
+<?php
+// index.php
+include("config/config.php"); 
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Gestión de Datos</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Mi Proyecto Web</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>📊 Sistema de Gestión</h1>
+      <h1>Bienvenido a Mi Proyecto</h1>
       <nav>
-        <a href="create_data.php">➕ Crear</a>
-        <a href="view_data.php">📂 Ver</a>
-        <a href="update_data.php">✏️ Actualizar</a>
-        <a href="delete_data.php">🗑️ Eliminar</a>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Crear</a></li>
+          <li><a href="#">Actualizar</a></li>
+          <li><a href="#">Eliminar</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <section>
-        <h2>Bienvenido</h2>
+      <section class="info">
+        <h2>Panel de Control</h2>
         <p>
-          Este sistema permite administrar la tabla <b>datos</b> conectada a
-          MySQL.
+          Aquí puedes gestionar tus datos conectados con la base de datos
+          <b>collins</b>.
         </p>
+        <button id="showMsg">Haz clic aquí</button>
+        <p id="msg"></p>
       </section>
 
-      <section>
-        <h2>Formulario de Registro</h2>
-        <form
-          action="../src/create_data.php"
-          method="POST"
-          onsubmit="return validarFormulario()"
-        >
-          <label>Nombre:</label>
-          <input type="text" name="nombre" required />
-
-          <label>Fecha:</label>
-          <input type="date" name="fecha" required />
-
-          <label>Tipo:</label>
-          <select name="tipo" required>
-            <option value="a">A</option>
-            <option value="b">B</option>
-            <option value="c">C</option>
-          </select>
-
-          <label>Descripción:</label>
-          <textarea name="descripcion" required></textarea>
-
-          <button type="submit">Guardar</button>
-        </form>
+      <section class="tabla">
+        <h2>Datos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Fecha</th>
+              <th>Tipo</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Ejemplo</td>
+              <td>2025-08-27</td>
+              <td>A</td>
+              <td>Descripción de prueba</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </main>
 
     <footer>
-      <p>© 2025 - Sistema Collins</p>
+      <p>&copy; 2025 - Mi Proyecto</p>
     </footer>
-
-    <script src="scripts.js"></script>
   </body>
 </html>
-a

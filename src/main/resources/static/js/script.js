@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("form");
+  const btn = document.getElementById("showMsg");
+  const msg = document.getElementById("msg");
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("¡Gracias por comprometerte con la causa! 🐶🐱");
-    });
+  btn.addEventListener("click", () => {
+    msg.textContent = "¡Bienvenido! Este mensaje fue generado con JavaScript.";
+    msg.style.color = "green";
+    msg.style.fontWeight = "bold";
+  });
 });
